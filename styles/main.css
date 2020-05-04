@@ -26,15 +26,17 @@
   .nav__list .nav__item {
     position: relative;
     margin-right: 20px; }
+    .nav__list .nav__item:last-child {
+      margin-right: 0; }
 
-.nav-link {
+.nav__link {
   padding-top: 22.5px;
   padding-bottom: 22.5px;
   display: inline-block;
   color: #000;
   text-decoration: none;
   text-transform: uppercase; }
-  .nav-link:hover {
+  .nav__link:hover {
     color: #00acdc; }
 
 .is-active {
@@ -50,14 +52,9 @@
   background: #00acdc;
   border-radius: 8px; }
 
-.nav__item:last-child {
-  margin-right: 0; }
-
 .card {
   width: 200px;
   padding: 30px 14px 14px;
-  margin-right: 48px;
-  margin-bottom: 50px;
   background-color: #fff;
   color: #000;
   border: 1px solid #f3f3f3;
@@ -65,57 +62,51 @@
   -webkit-transition: -webkit-box-shadow 0.25s ease;
   transition: -webkit-box-shadow 0.25s ease;
   transition: box-shadow 0.25s ease;
-  transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease; }
+  transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
+  margin-bottom: 50px;
+  margin-right: 48px; }
+  .card:nth-child(4n) {
+    margin-right: 0; }
   .card__img {
     width: 160px;
     height: 134px;
     margin-left: 5px;
-    margin-bottom: 41px; }
+    margin-bottom: 42px; }
   .card__info {
-    margin-bottom: 15px; }
+    margin-bottom: 16px; }
+  .card__description {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px; }
+  .card .rate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 19px; }
 
-.card:nth-child(4n) {
-  margin-right: 0; }
-
-.card--description {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px; }
-
-.small {
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 14px; }
-
-.rate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 19px; }
-
-.stars {
+.rate__stars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .rate__stars .rate__star {
+    height: 15px;
+    width: 15px;
+    margin-right: 4px;
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat; }
 
-.star--item {
-  height: 15px;
-  width: 15px;
-  margin-right: 4px;
-  background-image: url(../images/star.svg);
-  background-repeat: no-repeat; }
-
-.stars:last-child {
+.rate__star:last-child {
   margin-right: 0; }
 
-.star--5 .star--item,
-.star--1 .star--item:nth-child(-n + 1),
-.star--2 .star--item:nth-child(-n + 2),
-.star--3 .star--item:nth-child(-n + 3),
-.star--4 .star--item:nth-child(-n + 4) {
+.rate__stars--5 .rate__star,
+.rate__stars--1 .rate__star:nth-child(-n + 1),
+.rate__stars--2 .rate__star:nth-child(-n + 2),
+.rate__stars--3 .rate__star:nth-child(-n + 3),
+.rate__stars--4 .rate__star:nth-child(-n + 4) {
   background-image: url(../images/star-active.svg); }
 
 .price {
@@ -129,41 +120,41 @@
       -ms-flex-align: end;
           align-items: flex-end;
   margin-bottom: 20px; }
-  .price .price--value {
+  .price__value {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px; }
-
-.price--btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 170px;
-  height: 40px;
-  padding-top: 11px;
-  border-radius: 5px;
-  background: #00acdc;
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 14px; }
-
-.price--btn:hover {
-  background-color: #fff;
-  border: 1px solid #00acdc;
-  color: #00acdc; }
+  .price__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 170px;
+    height: 40px;
+    padding-top: 11px;
+    border-radius: 5px;
+    background: #00acdc;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px; }
+  .price__btn:hover {
+    background-color: #fff;
+    border: 1px solid #00acdc;
+    color: #00acdc; }
 
 * {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-html {
+body {
   font-family: "Roboto", sans-serif;
-  font-weight: bold; }
+  font-size: 11px;
+  line-height: 13px; }
 
 .main {
   margin: 0 auto;
