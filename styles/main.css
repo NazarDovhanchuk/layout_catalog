@@ -63,7 +63,6 @@
   transition: -webkit-box-shadow 0.25s ease;
   transition: box-shadow 0.25s ease;
   transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
-  margin-bottom: 50px;
   margin-right: 48px; }
   .card:nth-child(4n) {
     margin-right: 0; }
@@ -157,12 +156,11 @@ body {
   line-height: 13px; }
 
 .main {
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 944px; }
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 50px 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 /*# sourceMappingURL=main.css.map */
