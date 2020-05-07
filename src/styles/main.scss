@@ -14,8 +14,8 @@ body {
 }
 
 .main {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  width: 944px;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 50px 48px;
+  justify-content: center;
 }
